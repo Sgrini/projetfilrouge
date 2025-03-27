@@ -1,0 +1,142 @@
+:root {
+  --navbar-height: 60px;
+  --primary-color: #dc5f00;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: extra-bold;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+a.hover {
+  color: #6f2dbd;
+}
+
+header {
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: black;
+}
+
+.container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+img {
+  width: 30px;
+  color: #fff;
+}
+
+.cta-nav-color {
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.action-button {
+  background-color: #dc5f00;
+  display: flex;
+  color: #120d31;
+  border: 1px solid #dc5f00;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.action-button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.pro {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.pro:hover {
+  background-color: #fff;
+  color: #120d31;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-signup {
+  background-color: #dc5f00;
+  display: flex;
+  color: #120d31;
+  border: 1px solid #dc5f00;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-signup:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-infos {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-white:hover {
+  background-color: #f0f0f0;
+}
