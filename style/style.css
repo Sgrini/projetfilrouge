@@ -1,6 +1,7 @@
 :root {
   --navbar-height: 60px;
   --primary-color: #dc5f00;
+  --secondary-color: #604cc3;
 }
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 h1 {
@@ -68,75 +70,58 @@ img {
   gap: 10px;
 }
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.action-button {
-  background-color: #dc5f00;
-  display: flex;
-  color: #120d31;
-  border: 1px solid #dc5f00;
-  padding: 0.5rem 1.2rem;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.action-button:hover {
-  color: #fff;
+.button__book:hover {
+  color: white;
   border: 1px solid #fff;
 }
-.pro {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-}
-.pro:hover {
-  background-color: #fff;
-  color: #120d31;
-}
 
-.button-container {
+.event {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.date {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+  height: 80px;
+  width: 90px;
+  border: 1px solid;
 }
 
-.btn {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
+.date:hover {
+  background-color: var(--secondary-color);
+  color: white;
 }
-
-.btn-signup {
-  background-color: #dc5f00;
-  display: flex;
-  color: #120d31;
-  border: 1px solid #dc5f00;
-  padding: 0.5rem 1.2rem;
-  border-radius: 5px;
+.date .day {
+  font-size: 22px;
   font-weight: bold;
-  cursor: pointer;
+}
+.date .month {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.content {
+  flex: 1;
+}
+.title__events {
+  text-align: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 5px 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.description {
+  font-size: 14px;
 }
 
-.btn-signup:hover {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-infos {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-white:hover {
-  background-color: #f0f0f0;
+.separator {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

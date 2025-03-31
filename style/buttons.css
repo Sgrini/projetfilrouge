@@ -1,0 +1,121 @@
+.buttons {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.action-button {
+  background-color: #dc5f00;
+  display: flex;
+  color: #120d31;
+  border: 1px solid #dc5f00;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.action-button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.pro {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.pro:hover {
+  background-color: #fff;
+  color: #120d31;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button__back {
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+  border-radius: 10%;
+  border-width: 3px;
+  border-color: black;
+  border-style: hidden;
+  text-decoration: underline;
+}
+
+.button__back:hover {
+  background-color: #dc5f00;
+  color: white;
+}
+
+.btn-signup {
+  background-color: #dc5f00;
+  display: flex;
+  color: #120d31;
+  border: 1px solid #dc5f00;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-up-link {
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+  border-style: hidden;
+  text-decoration: underline;
+}
+
+.sign-up-link:hover {
+  background-color: #dc5f00;
+  color: white;
+}
+
+.btn-signup:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-infos {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-white:hover {
+  background-color: #f0f0f0;
+}
+
+.button__book {
+  display: flex;
+  color: #120d31;
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 2rem;
+}
+
+.events__all-button:hover {
+  background-color: var(--secondary-color);
+}

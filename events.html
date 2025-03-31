@@ -20,10 +20,11 @@
           </div>
           <div class="navbar__main">
             <ul class="links">
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="events.html">Evenements</a></li>
-              <li><a href="#foire_aux_questions">FAQ</a></li>
-              <li><a href="contact">Contact</a></li>
+              <li><a class="nav__link" href="index.html">Accueil</a></li>
+              <li><a class="nav__link" href="events.html">Evenements</a></li>
+              <li><a class="nav__link" href="admin.html">Coach</a></li>
+              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
+
             </ul>
             <div class="search">
               <input placeholder="Search" class="navbar__input" type="text" />
@@ -90,7 +91,7 @@
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               odit vero laboriosam quasi!
             </p>
-            <button class="events__current-button">Réserver ma place</button>
+            <button class="button__book">Réserver ma place</button>
           </div>
 
           <div class="events__img-wrapper">
@@ -106,13 +107,86 @@
             <button class="events__all-button">Voir tout</button>
             <button class="events__incoming-button">A venir</button>
           </div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <hr class="separator" />
+          <div class="event">
+            <div class="date">
+              <div class="day">14</div>
+              <div class="month">Fév 2024</div>
+            </div>
+            <div class="content">
+              <div class="title__events">1/2 Finale du Tournoi National</div>
+              <div class="description">
+                Location<br />Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.
+              </div>
+            </div>
+            <a href="#" class="button__book">Réserver ma place</a>
+          </div>
+          <hr class="separator" />
+
+          <div class="event">
+            <div class="date">
+              <div class="day">17</div>
+              <div class="month">Fév 2024</div>
+            </div>
+            <div class="content">
+              <div class="title__events">Finale du Tournoi National</div>
+              <div class="description">
+                Location<br />Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.
+              </div>
+            </div>
+            <a href="#" class="button__book">Réserver ma place</a>
+          </div>
+          <hr class="separator" />
+
+          <div class="event">
+            <div class="date">
+              <div class="day">18</div>
+              <div class="month">Fév 2024</div>
+            </div>
+            <div class="content">
+              <div class="title__events">
+                Remise des trophés du Tournoi National
+              </div>
+              <div class="description">
+                Location<br />Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.
+              </div>
+            </div>
+            <a href="#" class="button__book">Réserver ma place</a>
           </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="contenu-footer">
+        <div class="bloc" footer-services”>
+          <h3>Informations légales</h3>
+          <ul class="liste-services">
+            <li><a href="#">Politiques de confidentialité</a></li>
+            <li><a href="#">CGU</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div class="bloc" footer-informations”>
+          <h3>Liens</h3>
+          <ul class="liste-informations">
+            <li><a href="#"></a>Actualités</a></li>
+            <li><a href="#"></a>Notre histoire</a></li>
+            <li><a href="#"></a>Investisseurs</a></li>
+            <li><a href="#"></a>Développement durable</a></li>
+          </ul>
+        </div>
+        <div class="bloc" footer-contact” id="contact">
+          <h3>Contact</h3>
+          <p>06 06 06 06 06</p>
+          <p>supportclient@contact.com</p>
+          <p>86 rue aux arènes, Metz, 57000</p>
+        </div>
+        <p class="copyright">MNS School © 2025</p>
+      </div>
+    </footer>
   </body>
 </html>

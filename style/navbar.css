@@ -67,6 +67,10 @@
   align-items: center;
 }
 
+.nav__link:hover {
+  color: #dc5f00;
+}
+
 @media (max-width: 1400px) {
   .navbar {
     padding: 10px;
