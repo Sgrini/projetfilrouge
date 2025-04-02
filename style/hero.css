@@ -1,7 +1,7 @@
 .hero {
   background-image: url("/img/landingpage.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
   padding: 32px 0;
