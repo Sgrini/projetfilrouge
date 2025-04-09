@@ -1,0 +1,138 @@
+body {
+  display: flex;
+  background: -webkit-linear-gradient(
+    180deg,
+    #292057,
+    #5543ad,
+    #292057
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    180deg,
+    #292057,
+    #5543ad,
+    #292057
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.admin__wrapper {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 90px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 260px);
+  padding: 20px;
+}
+
+.main-content-admin {
+  flex: 1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #dc5f00;
+}
+
+.form-container-admin {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:disabled {
+  background: #f0f0f0;
+  color: #888;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  text-align: center;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 20px;
+}
+
+.inline-fields div {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancel {
+  background: #ddd;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.create {
+  background: #373a40;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  background: #dc5f00;
+}
+
+.create:hover {
+  background: #604cc3;
+}
+
+.admin__dashboard {
+  display: flex;
+  margin-top: 60px;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}

@@ -24,9 +24,19 @@
   color: #fff;
   border: 1px solid #fff;
 }
+.pro-signup {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
 .pro:hover {
   background-color: #fff;
   color: #120d31;
+}
+
+.pro-signup:hover {
+  background-color: black;
+  color: white;
 }
 
 .button-container {
