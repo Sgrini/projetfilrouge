@@ -1,0 +1,105 @@
+.shop__container {
+  margin-top: 90px;
+  max-width: 996px;
+  margin-left: 270px;
+  margin-bottom: 80px;
+}
+
+.search-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-filters input,
+.search-filters select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  border: none;
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.events {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.event-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 150%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.event-img {
+  background: #e0e0e0;
+  height: 150px;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-info h3 {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: black;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.event-info button {
+  background: black;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: black;
+  color: white;
+}
