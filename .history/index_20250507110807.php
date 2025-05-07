@@ -1,7 +1,3 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/admin/include/auth.php';
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,22 +20,9 @@
         </div>
         <div class="navbar__main">
           <ul class="links">
-            <?php if (!estConnecte()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="events.php">Evenements</a></li>
-              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-            <?php elseif (estConnecte() && !estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="events.php">Evenements</a></li>
-              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php elseif (estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php else: ?>
-            <?php endif; ?>
-
-
+            <li><a class="nav__link" href="index.php">Accueil</a></li>
+            <li><a class="nav__link" href="events.php">Evenements</a></li>
+            <li><a class="nav__link" href="admin.php">Mon Compte</a></li>
           </ul>
           <!-- Champ de recherche -->
           <div class="search">
@@ -55,13 +38,8 @@
           </div>
           <!-- Boutons d'inscription et de connexion -->
           <div class="buttons">
-            <?php if (!isset($_SESSION['utilisateur_id'])): ?>
-
-              <a href="signup.php" class="action-button pro">S'inscrire</a>
-              <a href="/admin/login.php" class="action-button">Se connecter</a>
-            <?php else: ?>
-              <a href="/admin/logout.php" class="action-button">Se déconnecter</a>
-            <?php endif; ?>
+            <a href="signup.php" class="action-button pro">S'inscrire</a>
+            <a href="/admin/login.php" class="action-button">Se connecter</a>
           </div>
         </div>
       </div>
@@ -100,13 +78,8 @@
         </p>
       </div>
       <div class="hero__header-cta">
-        <?php if (!isset($_SESSION['utilisateur_id'])): ?>
-
-          <button class="btn btn-signup">S'inscrire</button>
-          <button class="action-button pro">Plus d'informations</button>
-        <?php else: ?>
-          <a href="events.php" class="action-button">Voir les événements</a>
-        <?php endif; ?>
+        <button class="btn btn-signup">S'inscrire</button>
+        <button class="action-button pro">Plus d'informations</button>
       </div>
     </div>
     <!-- SECTION CLUB: Inscription des clubs -->

@@ -22,6 +22,7 @@
             <li><a class="nav__link" href="index.php">Accueil</a></li>
             <li><a class="nav__link" href="events.php">Evenements</a></li>
             <li><a class="nav__link" href="admin.php">Coach</a></li>
+            <li><a class="nav__link" href="#">Communauté</a></li>
           </ul>
           <!-- Champ de recherche -->
           <div class="search">

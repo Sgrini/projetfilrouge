@@ -24,20 +24,13 @@
         </div>
         <div class="navbar__main">
           <ul class="links">
+            <li><a class="nav__link" href="index.php">Accueil</a></li>
             <?php if (!estConnecte()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
               <li><a class="nav__link" href="events.php">Evenements</a></li>
               <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-            <?php elseif (estConnecte() && !estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="events.php">Evenements</a></li>
-              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php elseif (estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php else: ?>
             <?php endif; ?>
+
+            <li><a class="nav__link" href="admin.php">Mon compte</a></li>
 
 
           </ul>

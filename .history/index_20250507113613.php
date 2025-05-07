@@ -24,22 +24,9 @@
         </div>
         <div class="navbar__main">
           <ul class="links">
-            <?php if (!estConnecte()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="events.php">Evenements</a></li>
-              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-            <?php elseif (estConnecte() && !estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="events.php">Evenements</a></li>
-              <li><a class="nav__link" href="#foire_aux_questions">FAQ</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php elseif (estAdmin()): ?>
-              <li><a class="nav__link" href="index.php">Accueil</a></li>
-              <li><a class="nav__link" href="admin.php">Mon compte</a></li>
-            <?php else: ?>
-            <?php endif; ?>
-
-
+            <li><a class="nav__link" href="index.php">Accueil</a></li>
+            <li><a class="nav__link" href="events.php">Evenements</a></li>
+            <li><a class="nav__link" href="admin.php">Mon Compte</a></li>
           </ul>
           <!-- Champ de recherche -->
           <div class="search">
@@ -105,7 +92,7 @@
           <button class="btn btn-signup">S'inscrire</button>
           <button class="action-button pro">Plus d'informations</button>
         <?php else: ?>
-          <a href="events.php" class="action-button">Voir les événements</a>
+          <a href="/admin/events.php" class="action-button">Voir les événements</a>
         <?php endif; ?>
       </div>
     </div>

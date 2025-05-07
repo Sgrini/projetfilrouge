@@ -1,10 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/admin/include/function.php";
-
-// Démarrer la session
+// démarrer la session
 session_start();
 
-// Détruire toutes les données de la session
+//Détruire toutes les données de la session
 session_unset();
 session_destroy();
 

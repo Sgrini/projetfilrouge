@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <p class="sign-up-label">
     Pas encore de compte ?<span class="sign-up-link">M'inscrire</span>
   </p>
-  <a href="/index.php"><button class="button__back">Retour à l'accueil</button></a>
+  <a href="index.php"><button class="button__back">Retour à l'accueil</button></a>
 </div>
 </div>
 <br />

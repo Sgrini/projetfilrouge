@@ -1,12 +1,49 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/admin/include/function.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/admin/include/connect.php";
+
+// var_dump(password_hash("1234", PASSWORD_DEFAULT));
+// exit;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $email = $_POST['utilisateur_mail'];
+  $mot_de_passe = $_POST['utilisateur_mot_de_passe'];
+
+  // requête pour vérifier les identifiants
+  $stmt = $db->prepare("SELECT utilisateur_id, utilisateur_nom, utilisateur_mot_de_passe, role_id FROM utilisateurs WHERE utilisateur_mail=:utilisateur_mail");
+  $stmt->execute([":utilisateur_mail" => $email]);
+  $utilisateur = $stmt->fetch();
+
+
+  if ($utilisateur && password_verify($mot_de_passe, $utilisateur['utilisateur_mot_de_passe'])) {
+    // authentifiquation réussie
+    session_start();
+
+    $_SESSION['utilisateur_id'] = $utilisateur['utilisateur_id'];
+    $_SESSION['role_id'] = $utilisateur['role_id'];
+    $_SESSION['utilisateur_nom'] = $utilisateur['utilisateur_nom'];
+
+    // redirection selon le rôle
+    if ($_SESSION['role_id'] === 1) {
+      redirect("../admin.php");
+    } else {
+      redirect("../index.php");
+    }
+  } else {
+    $erreur = "identifiant ou mot de passe incorrect";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style/main.css" />
-  <script src="script.js" defer></script>
-  <title>MNS Sport Academy - Admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="/style/main.css" />
+  <title>Connect Club</title>
 </head>
 
 <body>
@@ -14,7 +51,7 @@
     <div class="container">
       <div class="navbar">
         <div class="logo">
-          <img src="./img/basketballicon.svg" alt="basket icon" />
+          <img src="../img/basketballicon.svg" alt="basket icon" />
           <a href="index.php">MNS Gest Club</a>
         </div>
         <div class="navbar__main">
@@ -22,6 +59,7 @@
             <li><a class="nav__link" href="index.php">Accueil</a></li>
             <li><a class="nav__link" href="events.php">Evenements</a></li>
             <li><a class="nav__link" href="admin.php">Coach</a></li>
+            <li><a class="nav__link" href="#foire_aux_questions">Communauté</a></li>
           </ul>
           <!-- Champ de recherche -->
           <div class="search">
@@ -55,78 +93,35 @@
           <li><a href="index.php">Accueil</a></li>
           <li><a href="events.php">Evenements</a></li>
           <li><a href="admin.php">Coach</a></li>
+          <li><a href="contact">Communauté</a></li>
           <div class="divider"></div>
           <div class="buttons-burger-menu open">
-            <a href="#" class="action-button pro">S'inscrire</a>
-            <a href="#" class="action-button">Se connecter</a>
+            <a href="signup.php" class="action-button pro">S'inscrire</a>
+            <a href="login.php" class="action-button">Se connecter</a>
           </div>
         </ul>
       </div>
     </div>
   </header>
+  <div class="form-container">
+    <p class="title">Connectez-Vous</p>
+    <form action="login.php" method="post" class="form">
+      <input name="utilisateur_mail" class="input" placeholder="Email" />
+      <input name="utilisateur_mot_de_passe" class="input" placeholder="Password" />
+      <p class="page-link">
+        <span class="page-link-label">Mot de Passe oublié ?</span>
+      </p>
+      <button class="form-btn">Connexion</button>
+    </form>
 
-  <section class="admin__dashboard">
-    <div class="sidebar">
-      <h2>Tableau de bord</h2>
-      <ul>
-        <li>📊 Tableau de bord</li>
-        <li><a href="admin.html">➕ Créer Événement</a></li>
-        <li><a href="team.html">⚙️ Management d'équipe</a></li>
-        <li>🎟️ Tickets</li>
-      </ul>
-    </div>
-    <div class="admin__wrapper">
-      <h1>Créer un événement</h1>
-      <div class="form-container-admin">
-        <form>
-          <label for="titre">Titre Événement</label>
-          <input type="text" id="titre" placeholder="Match championnat" disabled />
-
-          <label for="event-image">Event Image</label>
-          <div class="upload-box">
-            📤 Faites glisser et déposez ou cliquez pour télécharger
-          </div>
-
-          <div class="inline-fields">
-            <div>
-              <label for="places">Places disponibles</label>
-              <input type="number" id="places" value="100" />
-            </div>
-            <div>
-              <label for="prix">Prix du ticket</label>
-              <input type="text" id="prix" value="25.00" />
-            </div>
-          </div>
-
-          <div class="calendar-container">
-            <label for="date-time">Date et Heure du Match</label>
-            <input type="datetime-local" id="date-time">
-          </div>
-
-          <label for="stade">Stade / Ville</label>
-          <input type="text" id="stade" placeholder="Sports Arena" disabled />
-
-          <label for="description">Description</label>
-          <textarea id="description" placeholder="Détails de l'événement..."></textarea>
-
-          <h2>Informations de l'équipe</h2>
-
-          <label for="team">Nom d'équipe</label>
-          <input type="text" id="team" value="Warriors" />
-
-          <label for="players">Nom des joueurs</label>
-          <input type="text" id="players" value="John Doe, Jane Smith" disabled />
-
-          <div class="button-group">
-            <button type="button" class="cancel">Annuler</button>
-            <button type="submit" class="create">Créer</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
+    <p class="sign-up-label">
+      Pas encore de compte ?<span class="sign-up-link">M'inscrire</span>
+    </p>
+  </div>
+  </div>
+  <br />
+  <a href="index.html"><button class="button__back">Retour à l'accueil</button></a>
+  </div>
   <footer>
     <div class="footer__contenu-wrapper">
       <div class="contenu-footer">
