@@ -1,0 +1,152 @@
+h2 {
+  margin: 25px 0 15px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Header et info utilisateur */
+header {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+*/ .user-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Header et info utilisateur */
+header {
+  padding: 15px 20px;
+}
+
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.welcome {
+  color: #ff8c00; /* Orange pour "Bienvenue, Fan" */
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+/* Sections principales */
+.section-title {
+  font-size: 1.1rem;
+  margin: 15px 0 10px 20px;
+  color: #fff;
+}
+
+/* Section des réservations à venir */
+.reservation-item {
+  background-color: #fff;
+  color: #000;
+  margin: 10px 0;
+  padding: 15px;
+  position: relative;
+  border-radius: 0;
+}
+
+.match-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.date-box {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  line-height: 1.2;
+  margin-right: 15px;
+}
+
+.venue-info {
+  text-align: right;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.place-info {
+  color: #000;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Section retrouver mes amis */
+.search-bar {
+  margin: 10px 20px;
+  width: calc(100% - 40px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.friend-item {
+  margin: 15px 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.friend-image {
+  margin-right: 10px;
+}
+
+.friend-info {
+  display: inline-block;
+}
+
+.friend-name {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.friend-events {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Section événements passés */
+.events-table {
+  width: calc(100% - 40px);
+  margin: 15px 20px;
+  border-collapse: collapse;
+}
+
+.events-table th {
+  background-color: #fff;
+  color: #000;
+  padding: 8px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.events-table td {
+  padding: 8px;
+  background-color: #423080; /* Violet un peu plus clair pour les lignes */
+  border-bottom: 1px solid #332667;
+}
+
+.events-table tr:nth-child(even) td {
+  background-color: #4a3691; /* Une nuance légèrement différente pour l'alternance */
+}
+
+/* Styles pour Place VIP et Tribune Nord/Est */
+.place-vip {
+  color: green;
+}
+
+.tribune-nord {
+  color: #ff8c00; /* Orange */
+}
+
+.tribune-est {
+  color: #ff8c00; /* Orange */
+}

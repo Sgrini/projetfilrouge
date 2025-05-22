@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // fonction pour savoir si l'utilisateur connecter
 function estConnecte(): bool
 {
