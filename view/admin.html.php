@@ -19,16 +19,16 @@
             <ul>
                 <li>📊 Tableau de bord</li>
                 <li><a href="admin.html">➕ Créer Événement</a></li>
-                <li><a href="team.html">⚙️ Management d'équipe</a></li>
+                <li><a href="team.html">⚙️ Modifier l'événement</a></li>
                 <li>🎟️ Tickets</li>
             </ul>
         </div>
         <div class="admin__wrapper">
             <h1>Créer un événement</h1>
             <div class="form-container-admin">
-                <form>
+                <form method="post">
                     <label for="titre">Titre Événement</label>
-                    <select name="type_event" id="event_select">
+                    <select name="evenement_nom" id="event_select">
                         <option value="">--Choisissez le type d'événement--</option>
                         <option value="dog">Match championnat</option>
                         <option value="cat">Match amical</option>
@@ -43,21 +43,21 @@
                     <div class="inline-fields">
                         <div>
                             <label for="places">Places disponibles</label>
-                            <input type="number" id="places" value="100" />
+                            <input type="number" id="places" value="100" name="evenement_nombre_place" />
                         </div>
                         <div>
                             <label for="prix">Prix du ticket</label>
-                            <input type="text" id="prix" value="25.00" />
+                            <input type="text" id="prix" value="25.00" name="evenement_prix" />
                         </div>
                     </div>
 
                     <div class="calendar-container">
                         <label for="date-time">Date et Heure du Match</label>
-                        <input type="datetime-local" id="date-time">
+                        <input type="datetime-local" id="date-time" name="evenement_date">
                     </div>
 
                     <label for="stade">Stade / Ville</label>
-                    <input type="text" id="stade" placeholder="Sports Arena" />
+                    <input type="text" id="stade" placeholder="Sports Arena" name="evenement_ville" />
 
                     <label for="description">Description</label>
                     <textarea id="description" placeholder="Détails de l'événement..."></textarea>

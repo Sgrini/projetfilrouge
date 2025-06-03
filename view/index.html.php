@@ -30,7 +30,7 @@
             <div class="hero__header-cta">
                 <?php if (!isset($_SESSION['utilisateur_id'])): ?>
 
-                    <button class="btn btn-signup">S'inscrire</button>
+                    <button class="action-button pro">Voir événements</button>
                     <button class="action-button pro">Plus d'informations</button>
                 <?php else: ?>
                     <a href="events.php" class="action-button">Voir les événements</a>
