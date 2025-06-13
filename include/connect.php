@@ -3,6 +3,6 @@
 try {
     $db = new PDO("mysql:host=localhost;port=3307;dbname=gestclub;charset=utf8", "root", "");
 } catch (PDOException $e) {
-    echo "Connection échouée" . $e->getMessage();
+    echo "Connexion échouée" . $e->getMessage();
     exit;
 }

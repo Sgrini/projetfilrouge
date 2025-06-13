@@ -19,26 +19,22 @@
             <ul>
                 <li>📊 Tableau de bord</li>
                 <li><a href="admin.html">➕ Créer Événement</a></li>
-                <li><a href="team.html">⚙️ Modifier l'événement</a></li>
+                <li><a href="team.html">⚙️ Mes événements</a></li>
                 <li>🎟️ Tickets</li>
             </ul>
         </div>
         <div class="admin__wrapper">
             <h1>Créer un événement</h1>
             <div class="form-container-admin">
-                <form method="post">
+                <form method="POST" action="admin.php">
                     <label for="titre">Titre Événement</label>
                     <select name="evenement_nom" id="event_select">
-                        <option value="">--Choisissez le type d'événement--</option>
-                        <option value="dog">Match championnat</option>
-                        <option value="cat">Match amical</option>
-                        <option value="hamster">Match coupe</option>
-                        <option value="parrot">Tournoi</option>
+                        <option value="">Sélectionnez votre type d'événement</option>
+                        <?php foreach ($type_evenements as $type_evenement) {
+                            echo '<option value="' . hsc($type_evenement['evenement_type_id']) . '">' . hsc($type_evenement['evenement_type_nom']) . '</option>';
+                        }
+                        ?>
                     </select>
-                    <label for="event-image">Event Image</label>
-                    <div class="upload-box">
-                        📤 Faites glisser et déposez ou cliquez pour télécharger
-                    </div>
 
                     <div class="inline-fields">
                         <div>
@@ -66,6 +62,7 @@
 
                     <label for="team">Nom d'équipe</label>
                     <input type="text" id="team" value="Warriors" />
+                    <input type="hidden" name="evenement_id" value="0">
 
                     <div class="button-group">
                         <button type="button" class="cancel">Annuler</button>
